@@ -17,10 +17,11 @@ Korean explanations of AI papers, from background and core ideas to methods and 
 ## Paper Archive
 
 <!-- PAPER_ARCHIVE:START -->
-Total papers: 0
+Total papers: 1
 
 | Date | Paper | Venue | Category | Review |
 |---|---|---|---|---|
+| 2026-11-04 | [Segment Anything](https://arxiv.org/abs/2304.02643) | ICCV 2023 | Multimodal AI, Computer Vision | [Review](reviews/multimodal/2026-11-04-segment-anything.md) |
 <!-- PAPER_ARCHIVE:END -->
 
 [Reading List](reading-list.md)
