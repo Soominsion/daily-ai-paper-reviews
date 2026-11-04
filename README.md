@@ -25,6 +25,9 @@ Total papers: 0
 
 [Reading List](reading-list.md)
 
+
+# AI 논문 리뷰
+
 매일매일 AI 논문을 읽고, 논문 배경과 핵심 아이디어, 해결한 방법론과 실험구성까지 쉽게 풀어 설명합니다.
 주로 최신 논문들을 리뷰 합니다.
 
