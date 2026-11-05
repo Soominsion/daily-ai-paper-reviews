@@ -1,8 +1,30 @@
 # Reading List
 
-갱신일: **2026-11-04 (Asia/Seoul)**. Long-term Memory, Personalization, HCI, Recommendation을 중심으로 관리한다. 기존에 출처를 확인한 10편과 첨부 목록에서 추가한 확인 대기 25편, 총 35편이다. 학회 연도와 리뷰 작성·읽기 날짜는 따로 관리한다.
+갱신일: 2026-11-05 (Asia/Seoul). Long-term Memory, Personalization, HCI, Recommendation을 중심으로 관리한다. 기존 2026년 관심 논문 35편에 멀티모달 기초 논문 6편을 추가해 총 41편이다. 기존 목록은 발표·선정 출처를 확인한 10편과 확인 대기 25편으로 구성한다. 학회 연도, 최초 공개 연도, 리뷰 작성일과 읽기 날짜는 따로 관리한다.
 
-`P1`은 기억·개인화·사용자 상호작용, `P2`는 개인화 응용·HCI·추천, `P3`는 더 넓은 에이전트 역량과 기반 아이디어를 우선순위로 묶은 것이다. 첨부 목록의 `to-read`는 이 저장소의 `queued`로 통일했다. `queued → reading → drafted → done`으로 관리하며, 리뷰 공개 여부는 리뷰 파일의 `draft / published`로 따로 관리한다.
+`P1`은 기억·개인화·사용자 상호작용, `P2`는 개인화 응용·HCI·추천, `P3`는 더 넓은 에이전트 역량과 기반 아이디어를 우선순위로 묶은 것이다. 첨부 목록의 `to-read`는 이 저장소의 `queued`로 통일했다. `queued → reading → read → drafted → done`으로 관리한다. `read`는 읽기 완료, `drafted`는 설명 글 초안 작성, `done`은 최종 검토와 공개까지 완료한 상태다. 리뷰 파일의 `draft / published`는 별도로 관리한다.
+
+## 멀티모달 기초 학습
+
+2026년 관심 논문을 읽기 전에 시각·언어 모델의 구조, 학습, 평가를 익히기 위한 목록이다. 연도는 최초 공개 기준이며 학회 연도와 구분한다. CLIP은 이미 읽었으므로 배경 지식으로 참고하고, 오늘은 초기 Qwen-VL부터 읽는다. Qwen2-VL 등 후속 버전과 구별한다.
+
+| Model | Paper | First Released | Focus | Status | Reading Record |
+|---|---|---|---|---|---|
+| CLIP | [Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/abs/2103.00020) | 2021 | 이미지·텍스트 대조 학습과 표현 정렬 | read | 이전에 읽음; 정확한 날짜 미기록 |
+| LLaVA | [Visual Instruction Tuning](https://arxiv.org/abs/2304.08485) | 2023 | 시각 인코더·projection·LLM 연결과 두 단계 학습 | queued | — |
+| LLaVA-1.5 | [Improved Baselines with Visual Instruction Tuning](https://arxiv.org/abs/2310.03744) | 2023 | MLP 연결 모듈, 해상도, 학습 데이터와 평가 | queued | — |
+| BLIP-2 | [Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models](https://arxiv.org/abs/2301.12597) | 2023 | Q-Former와 동결된 인코더·LLM을 연결하는 학습 | queued | — |
+| Qwen-VL | [A Versatile Vision-Language Model for Understanding, Localization, Text Reading, and Beyond](https://arxiv.org/abs/2308.12966) | 2023 | 시각 adapter, 위치·텍스트 이해, 세 단계 학습과 평가 | reading | 2026-11-05 시작 |
+| DeepSeek-VL | [Towards Real-World Vision-Language Understanding](https://arxiv.org/abs/2403.05525) | 2024 | 하이브리드 시각 인코더와 공동 사전 학습·SFT | queued | — |
+
+### Qwen-VL을 읽으며 확인할 질문
+
+- 이미지는 어떤 특징과 시각 토큰으로 바뀌고, adapter는 이를 LLM에 어떻게 연결하는가?
+- 사전 학습, 다중 작업 사전 학습, SFT에서 데이터·목표·학습하는 모듈은 어떻게 달라지는가?
+- 일반 VQA, 이미지 속 텍스트 읽기, 위치 이해, 실제 대화 능력은 각각 어떻게 평가하는가?
+- 구조나 데이터 선택의 효과를 어떤 ablation으로 확인하는가?
+
+읽기 순서는 Abstract·Introduction과 전체 구조 그림으로 문제를 먼저 잡고, §2 Methodology → §3 Training → §4 Evaluation으로 이어 간다. 필요한 구간을 함께 번역·해설한 뒤 직접 이해한 내용을 메모하고, 이를 설명 글의 초안으로 발전시킨다. [원문 본문](https://arxiv.org/html/2308.12966v3)
 
 ## 출처를 확인한 논문
 
