@@ -14,7 +14,7 @@
 | LLaVA | [Visual Instruction Tuning](https://arxiv.org/abs/2304.08485) | 2023 | 시각 인코더·projection·LLM 연결과 두 단계 학습 | queued | — |
 | LLaVA-1.5 | [Improved Baselines with Visual Instruction Tuning](https://arxiv.org/abs/2310.03744) | 2023 | MLP 연결 모듈, 해상도, 학습 데이터와 평가 | queued | — |
 | BLIP-2 | [Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models](https://arxiv.org/abs/2301.12597) | 2023 | Q-Former와 동결된 인코더·LLM을 연결하는 학습 | queued | — |
-| Qwen-VL | [A Versatile Vision-Language Model for Understanding, Localization, Text Reading, and Beyond](https://arxiv.org/abs/2308.12966) | 2023 | 시각 adapter, 위치·텍스트 이해, 세 단계 학습과 평가 | reading | 2026-11-05 시작 |
+| Qwen-VL | [A Versatile Vision-Language Model for Understanding, Localization, Text Reading, and Beyond](https://arxiv.org/abs/2308.12966) | 2023 | 시각 adapter, 위치·텍스트 이해, 세 단계 학습과 평가 | done | 2026-11-05 읽기·작성; 2026-11-06 최종 검토·공개 |
 | DeepSeek-VL | [Towards Real-World Vision-Language Understanding](https://arxiv.org/abs/2403.05525) | 2024 | 하이브리드 시각 인코더와 공동 사전 학습·SFT | queued | — |
 
 ### Qwen-VL을 읽으며 확인할 질문
