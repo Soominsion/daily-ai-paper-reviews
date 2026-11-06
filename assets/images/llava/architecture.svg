@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="620" viewBox="0 0 1440 620" role="img" aria-labelledby="title desc">
+  <title id="title">Original LLaVA: image and instruction to a language response</title>
+  <desc id="desc">CLIP produces N visual features. A linear projection changes each feature dimension while keeping N tokens. Visual and text embeddings enter Vicuna as one sequence. CLIP remains frozen in both stages. Stage one trains the projection; stage two trains the projection and Vicuna.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#475569"/></marker>
+    <style>
+      text{font-family:"Segoe UI",Arial,sans-serif;fill:#0f172a;text-anchor:middle}
+      .title{font-size:32px;font-weight:700;text-anchor:start}
+      .subtitle{font-size:21px;fill:#475569;text-anchor:start}
+      .label{font-size:23px;font-weight:600}
+      .tokenlabel{font-size:19px;font-weight:600}
+      .detail{font-size:19px;fill:#475569}
+      .small{font-size:18px;fill:#475569}
+      .flow{fill:none;stroke:#475569;stroke-width:3;marker-end:url(#arrow)}
+      .data{fill:#fff;stroke:#cbd5e1;stroke-width:2}
+      .frozen{fill:#eef2f7;stroke:#94a3b8;stroke-width:2}
+      .learned{fill:#e0f2fe;stroke:#0284c7;stroke-width:2}
+    </style>
+  </defs>
+  <rect width="1440" height="620" rx="20" fill="#f8fafc"/>
+  <text x="42" y="57" class="title">LLaVA: a linear bridge from CLIP to Vicuna</text>
+  <text x="42" y="91" class="subtitle">Conceptual diagram of the original 2023 model</text>
+
+  <rect x="35" y="180" width="120" height="110" rx="12" class="data"/>
+  <text x="95" y="226" class="label">Image</text><text x="95" y="258" class="detail">X_v</text>
+  <path d="M155 235 H201" class="flow"/>
+
+  <rect x="210" y="180" width="180" height="110" rx="12" class="frozen"/>
+  <text x="300" y="218" class="label">CLIP ViT-L/14</text><text x="300" y="249" class="detail">vision encoder</text><text x="300" y="276" class="small">frozen in both stages</text>
+  <path d="M390 235 H431" class="flow"/>
+
+  <rect x="440" y="180" width="140" height="110" rx="12" class="data"/>
+  <text x="510" y="218" class="label">Features</text><text x="510" y="249" class="detail">Z_v</text><text x="510" y="276" class="small">N × d_v</text>
+  <path d="M580 235 H621" class="flow"/>
+
+  <rect x="630" y="180" width="160" height="110" rx="12" class="learned"/>
+  <text x="710" y="218" class="label">Projection</text><text x="710" y="249" class="detail">linear layer W</text><text x="710" y="276" class="small">keeps N tokens</text>
+  <path d="M790 235 H831" class="flow"/>
+
+  <rect x="840" y="180" width="140" height="110" rx="12" class="data"/>
+  <text x="910" y="218" class="tokenlabel">Visual tokens</text><text x="910" y="249" class="detail">H_v</text><text x="910" y="276" class="small">N × d_L</text>
+  <path d="M980 225 H1021" class="flow"/>
+
+  <rect x="1030" y="180" width="170" height="110" rx="12" class="learned"/>
+  <text x="1115" y="222" class="label">Vicuna</text><text x="1115" y="255" class="detail">language model</text>
+  <path d="M1200 235 H1241" class="flow"/>
+
+  <rect x="1250" y="180" width="155" height="110" rx="12" class="data"/>
+  <text x="1327" y="220" class="label">Response</text><text x="1327" y="254" class="detail">token by token</text>
+
+  <rect x="380" y="380" width="200" height="100" rx="12" class="data"/>
+  <text x="480" y="421" class="label">User instruction</text><text x="480" y="452" class="detail">X_q</text>
+  <path d="M580 430 H621" class="flow"/>
+  <rect x="630" y="380" width="160" height="100" rx="12" class="data"/>
+  <text x="710" y="421" class="label">Tokenize</text><text x="710" y="452" class="detail">+ text embedding</text>
+  <path d="M790 430 H831" class="flow"/>
+  <rect x="840" y="380" width="140" height="100" rx="12" class="data"/>
+  <text x="910" y="417" class="tokenlabel">Text tokens</text><text x="910" y="449" class="detail">d_L per token</text>
+  <path d="M980 430 H1005 V265 H1021" class="flow"/>
+  <text x="1183" y="345" class="small">visual + text embeddings</text>
+  <text x="1183" y="370" class="small">form one input sequence</text>
+
+  <rect x="35" y="526" width="1370" height="64" rx="12" fill="#e2e8f0"/>
+  <text x="720" y="552" class="small">Stage 1: train projection; freeze CLIP and Vicuna</text>
+  <text x="720" y="578" class="small">Stage 2: train projection and Vicuna; freeze CLIP</text>
+</svg>
