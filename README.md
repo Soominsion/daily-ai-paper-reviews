@@ -21,7 +21,7 @@ Total papers: 3
 
 | Date | Paper | Venue | Category | Review |
 |---|---|---|---|---|
-| 2026-11-07 | [Visual Instruction Tuning](https://arxiv.org/abs/2304.08485) | NeurIPS 2023 | Multimodal AI, Vision-Language Models | [Review](reviews/multimodal/2026-11-07-llava.md) |
+| 2026-11-06 | [Visual Instruction Tuning](https://arxiv.org/abs/2304.08485) | NeurIPS 2023 | Multimodal AI, Vision-Language Models | [Review](reviews/multimodal/2026-11-07-llava.md) |
 | 2026-11-05 | [Qwen-VL: A Versatile Vision-Language Model for Understanding, Localization, Text Reading, and Beyond](https://arxiv.org/abs/2308.12966) | arXiv 2023 | Multimodal AI, Vision-Language Models | [Review](reviews/multimodal/2026-11-05-qwen-vl.md) |
 | 2026-11-04 | [Segment Anything](https://arxiv.org/abs/2304.02643) | ICCV 2023 | Multimodal AI, Computer Vision | [Review](reviews/multimodal/2026-11-04-segment-anything.md) |
 <!-- PAPER_ARCHIVE:END -->
