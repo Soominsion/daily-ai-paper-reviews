@@ -17,10 +17,11 @@ Korean explanations of AI papers, from background and core ideas to methods and 
 ## Paper Archive
 
 <!-- PAPER_ARCHIVE:START -->
-Total papers: 3
+Total papers: 4
 
 | Date | Paper | Venue | Category | Review |
 |---|---|---|---|---|
+| 2026-11-09 | [DeepSeek-VL: Towards Real-World Vision-Language Understanding](https://arxiv.org/abs/2403.05525) | arXiv 2024 | Multimodal AI, Vision-Language Models | [Review](reviews/multimodal/2026-11-09-deepseek-vl.md) |
 | 2026-11-06 | [Visual Instruction Tuning](https://arxiv.org/abs/2304.08485) | NeurIPS 2023 | Multimodal AI, Vision-Language Models | [Review](reviews/multimodal/2026-11-07-llava.md) |
 | 2026-11-05 | [Qwen-VL: A Versatile Vision-Language Model for Understanding, Localization, Text Reading, and Beyond](https://arxiv.org/abs/2308.12966) | arXiv 2023 | Multimodal AI, Vision-Language Models | [Review](reviews/multimodal/2026-11-05-qwen-vl.md) |
 | 2026-11-04 | [Segment Anything](https://arxiv.org/abs/2304.02643) | ICCV 2023 | Multimodal AI, Computer Vision | [Review](reviews/multimodal/2026-11-04-segment-anything.md) |

@@ -1,12 +1,12 @@
 # Reading List
 
-갱신일: 2026-11-07 (Asia/Seoul). Long-term Memory, Personalization, HCI, Recommendation을 중심으로 관리한다. 기존 2026년 관심 논문 35편에 멀티모달 기초 논문 6편을 추가해 총 41편이다. 기존 목록은 발표·선정 출처를 확인한 10편과 확인 대기 25편으로 구성한다. 학회 연도, 최초 공개 연도, 리뷰 작성일과 읽기 날짜는 따로 관리한다.
+갱신일: 2026-11-11 (Asia/Seoul). Long-term Memory, Personalization, HCI, Recommendation을 중심으로 관리한다. 기존 2026년 관심 논문 35편에 멀티모달 기초 논문 6편을 추가해 총 41편이다. 기존 목록은 발표·선정 출처를 확인한 10편과 확인 대기 25편으로 구성한다. 학회 연도, 최초 공개 연도, 리뷰 작성일과 읽기 날짜는 따로 관리한다.
 
 `P1`은 기억·개인화·사용자 상호작용, `P2`는 개인화 응용·HCI·추천, `P3`는 더 넓은 에이전트 역량과 기반 아이디어를 우선순위로 묶은 것이다. 첨부 목록의 `to-read`는 이 저장소의 `queued`로 통일했다. `queued → reading → read → drafted → done`으로 관리한다. `read`는 읽기 완료, `drafted`는 설명 글 초안 작성, `done`은 최종 검토와 공개까지 완료한 상태다. 리뷰 파일의 `draft / published`는 별도로 관리한다.
 
 ## 멀티모달 기초 학습
 
-2026년 관심 논문을 읽기 전에 시각·언어 모델의 구조, 학습, 평가를 익히기 위한 목록이다. 연도는 최초 공개 기준이며 학회 연도와 구분한다. CLIP과 초기 Qwen-VL을 읽었으며, 초기 LLaVA의 Visual Instruction Tuning도 읽기와 설명 글 공개를 마쳤다. Qwen2-VL, LLaVA-1.5 등 후속 버전과 구별한다.
+2026년 관심 논문을 읽기 전에 시각·언어 모델의 구조, 학습, 평가를 익히기 위한 목록이다. 연도는 최초 공개 기준이며 학회 연도와 구분한다. CLIP과 초기 Qwen-VL을 읽었으며, 초기 LLaVA의 Visual Instruction Tuning과 초기 DeepSeek-VL(2024)도 읽기와 설명 글 공개를 마쳤다. Qwen2-VL, LLaVA-1.5, DeepSeek-VL2 등 후속 버전과 구별한다.
 
 | Model | Paper | First Released | Focus | Status | Reading Record |
 |---|---|---|---|---|---|
@@ -15,7 +15,16 @@
 | LLaVA-1.5 | [Improved Baselines with Visual Instruction Tuning](https://arxiv.org/abs/2310.03744) | 2023 | MLP 연결 모듈, 해상도, 학습 데이터와 평가 | queued | — |
 | BLIP-2 | [Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models](https://arxiv.org/abs/2301.12597) | 2023 | Q-Former와 동결된 인코더·LLM을 연결하는 학습 | queued | — |
 | Qwen-VL | [A Versatile Vision-Language Model for Understanding, Localization, Text Reading, and Beyond](https://arxiv.org/abs/2308.12966) | 2023 | 시각 adapter, 위치·텍스트 이해, 세 단계 학습과 평가 | done | 2026-11-05 읽기·작성; 2026-11-06 최종 검토·공개 |
-| DeepSeek-VL | [Towards Real-World Vision-Language Understanding](https://arxiv.org/abs/2403.05525) | 2024 | 하이브리드 시각 인코더와 공동 사전 학습·SFT | queued | — |
+| DeepSeek-VL | [Towards Real-World Vision-Language Understanding](https://arxiv.org/abs/2403.05525) | 2024 | 하이브리드 시각 인코더와 공동 사전 학습·SFT | done | 2026-11-10 함께 읽기·초안 작성; [리뷰 작성일 2026-11-09](reviews/multimodal/2026-11-09-deepseek-vl.md); 2026-11-11 최종 승인·공개 |
+
+### DeepSeek-VL을 읽으며 확인한 질문
+
+- 7B 모델에서 SigLIP과 SAM 이미지 인코더는 각각 어떤 정보를 담당하고, 두 특징은 어댑터에서 어떻게 합쳐지는가?
+- Qwen-VL의 query 기반 어댑터, 초기 LLaVA의 projection과 연결 방식이 어떻게 다른가?
+- 어댑터 학습·시각-언어 공동 사전 학습·SFT에서 학습 목표와 업데이트/고정 모듈은 어떻게 달라지는가?
+- 멀티모달 데이터와 텍스트 데이터를 어떻게 섞으며, 시각 능력과 언어 능력을 각각 어떻게 평가하는가?
+
+전체 구조를 먼저 살핀 뒤 Abstract부터 한 문단씩 읽는다. 본문은 §1 Introduction → §2 Data Construction → §3 Approach → §4 Evaluation → §5 Conclusion, Limitation, and Future Work 순서다. 1.3B와 7B의 시각 인코더 구성이 다르다는 점을 구분한다. [원문 본문](https://arxiv.org/html/2403.05525v2), [공식 구현](https://github.com/deepseek-ai/DeepSeek-VL)
 
 ### LLaVA를 읽으며 확인할 질문
 
